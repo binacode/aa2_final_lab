@@ -1,4 +1,9 @@
 github URL: https://github.com/binacode/aa2_final_lab.git
+Playbooks is: ds_*_.yml
+Tower Screenshot is: 
+  - screenshot_Tower_job_templates.png
+  - screenshot_Tower_Projects.png
+  
 
 Final Lab work directory list:
 
