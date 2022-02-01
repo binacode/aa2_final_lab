@@ -6,9 +6,9 @@
   tags:
     - database_servers
   roles:
-    - role: firewall
-      vars:
-        firewall_services:
-          - postgres
-
+#    - role: firewall
+#      vars:
+#        firewall_services:
+#          - postgres
+#
 #    - role: postgre-server
