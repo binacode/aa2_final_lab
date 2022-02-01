@@ -1,0 +1,14 @@
+---
+- name: Deploy, configure, and populate Postgres 12
+  hosts: database_servers
+  become: true
+  gather_facts: false
+  tags:
+    - database_servers
+  roles:
+    - role: firewall
+      vars:
+        firewall_services:
+          - postgres
+
+    - role: postgre-server
