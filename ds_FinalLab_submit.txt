@@ -1,0 +1,104 @@
+github URL: https://github.com/binacode/aa2_final_lab.git
+
+Final Lab work directory list:
+
+[devops@control 0 ~/aa2_final_lab main|…1]$ pwd
+/home/devops/aa2_final_lab
+[devops@control 0 ~/aa2_final_lab main|…1]$ ls
+ansible.cfg                 ds_in_memory_inventory.yml  flask_service.j2        roles/
+collections/                ds_instances.yml            haproxy.cfg.j2          screenshot_Tower_job_templates.png
+ds_config_instance.yml      ds_main.yml                 hosts                   screenshot_Tower_Projects.png
+ds_deploy_flaskapp.yml      ds_provision_osp.yml        launch_resource_hub.j2  ssh.cfg
+ds_deploy_haproxy.yml       ds_site_instance.yml        main.yml                teardown.yml
+ds_deploy_postgres12.yml    ds_smoke_tests.yml          pg_hba.conf.j2          vars/
+ds_dictionary_instance.yml  ds_teardown.yml             README.adoc
+[devops@control 0 ~/aa2_final_lab main|…1]$
+
+[devops@control 0 ~/aa2_final_lab main|…1]$ ls roles
+firewall/  flask-app/  haproxy/  postgre-server/
+[devops@control 0 ~/aa2_final_lab main|…1]$ tree roles/firewall
+roles/firewall
+├── defaults
+│   └── main.yml
+├── files
+├── handlers
+│   └── main.yml
+├── meta
+│   └── main.yml
+├── README.md
+├── tasks
+│   └── main.yml
+├── templates
+├── tests
+│   ├── inventory
+│   └── test.yml
+└── vars
+    └── main.yml
+
+8 directories, 8 files
+[devops@control 0 ~/aa2_final_lab main|…1]$ tree roles/flask-app/
+roles/flask-app/
+├── defaults
+│   └── main.yml
+├── files
+├── handlers
+│   └── main.yml
+├── meta
+│   └── main.yml
+├── README.md
+├── tasks
+│   └── main.yml
+├── templates
+│   ├── flask_service.j2
+│   └── launch_resource_hub.j2
+├── tests
+│   ├── inventory
+│   └── test.yml
+└── vars
+    └── main.yml
+
+8 directories, 10 files
+[devops@control 0 ~/aa2_final_lab main|…1]$ tree roles/haproxy/
+roles/haproxy/
+├── defaults
+│   └── main.yml
+├── files
+├── handlers
+│   └── main.yml
+├── meta
+│   └── main.yml
+├── README.md
+├── tasks
+│   └── main.yml
+├── templates
+│   └── haproxy.cfg.j2
+├── tests
+│   ├── inventory
+│   └── test.yml
+└── vars
+    └── main.yml
+
+8 directories, 9 files
+[devops@control 0 ~/aa2_final_lab main|…1]$ tree roles/postgre-server/
+roles/postgre-server/
+├── defaults
+│   └── main.yml
+├── files
+├── handlers
+│   └── main.yml
+├── meta
+│   └── main.yml
+├── README.md
+├── tasks
+│   └── main.yml
+├── templates
+│   └── pg_hba.conf.j2
+├── tests
+│   ├── inventory
+│   └── test.yml
+└── vars
+    └── main.yml
+
+8 directories, 9 files
+[devops@control 0 ~/aa2_final_lab main|…1]$
+
