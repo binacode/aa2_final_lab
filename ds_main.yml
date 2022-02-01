@@ -1,0 +1,50 @@
+---
+- import_playbook: ds_in_memory_inventory.yml
+
+- name: Deploy, configure, and populate Postgres 12
+  hosts: database_servers
+  become: true
+  gather_facts: false
+  tags:
+    - database_servers
+  roles:
+    - role: firewall
+      vars:
+        firewall_services:
+          - postgresql
+
+    - role: postgre-server
+
+- name: Deploy, configure, and populate flask repo and virtualenv
+  hosts: app_servers
+  become: true
+  gather_facts: false
+  tags:
+    - application_servers
+    - flask
+  roles:
+    - role: firewall
+      vars:
+        firewall_services:
+          - http
+        firewall_tcp_ports:
+          - 8080
+
+    - role: flask-app
+    
+- name: Deploy haproxy load balancer
+  hosts: load_balancers
+  gather_facts: false 
+  become: true
+  tags:
+    - load_balancers
+  
+  roles:
+    - role: firewall
+      vars:
+        firewall_services:
+          - http
+        firewall_tcp_ports:
+          - 80
+
+    - role: haproxy

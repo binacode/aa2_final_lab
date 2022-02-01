@@ -1,0 +1,104 @@
+---
+instances:
+-   CPU: 4
+    Memory: 8192
+    Metadata:
+        AnsibleGroup: database_servers
+        AnsibleGroup2: internal
+        deployment_name: dev
+    Name: appdb1
+    Private_ip: 192.168.51.11
+    Public_IP: ''
+    State: active
+-   CPU: 4
+    Memory: 8192
+    Metadata:
+        AnsibleGroup: app_servers
+        AnsibleGroup2: internal
+        deployment_name: dev
+    Name: app2
+    Private_ip: 192.168.51.18
+    Public_IP: ''
+    State: active
+-   CPU: 4
+    Memory: 8192
+    Metadata:
+        AnsibleGroup: app_servers
+        AnsibleGroup2: internal
+        deployment_name: dev
+    Name: app1
+    Private_ip: 192.168.51.20
+    Public_IP: ''
+    State: active
+-   CPU: 4
+    Memory: 8192
+    Metadata:
+        AnsibleGroup: load_balancers
+        AnsibleGroup2: internal
+        deployment_name: dev
+    Name: frontend1
+    Private_ip: 192.168.51.14
+    Public_IP: ''
+    State: active
+-   CPU: 4
+    Memory: 8192
+    Metadata:
+        AnsibleGroup: towerfl
+        Project: finallab-4c25
+        env_type: finallab
+        guid: 4c25
+        instance_filter: finallab-dsong@redhat.com
+        lab: tower
+        network: tower
+        ostype: linux
+        owner: dsong@redhat.com
+    Name: towerfl
+    Private_ip: 192.168.53.13
+    Public_IP: ''
+    State: active
+-   CPU: 4
+    Memory: 8192
+    Metadata:
+        AnsibleGroup: osp_instances
+        deployment_name: dev
+    Name: server2
+    Private_ip: 192.168.51.13
+    Public_IP: ''
+    State: active
+-   CPU: 4
+    Memory: 8192
+    Metadata:
+        AnsibleGroup: osp_instances
+        deployment_name: dev
+    Name: server1
+    Private_ip: 192.168.51.16
+    Public_IP: ''
+    State: active
+-   CPU: 2
+    Memory: 10240
+    Metadata:
+        AnsibleGroup: bastions,controls
+        Project: ansible-advanced-v2-4c25
+        env_type: ansible-advanced-v2
+        guid: 4c25
+        instance_filter: ansible-advanced-v2-dsong@redhat.com
+        ostype: linux
+        owner: dsong@redhat.com
+    Name: control
+    Private_ip: 192.168.50.125
+    Public_IP: 150.239.28.224
+    State: active
+-   CPU: 4
+    Memory: 32768
+    Metadata:
+        AnsibleGroup: satellites
+        Project: ansible-advanced-v2-4c25
+        env_type: ansible-advanced-v2
+        guid: 4c25
+        instance_filter: ansible-advanced-v2-dsong@redhat.com
+        ostype: linux
+        owner: dsong@redhat.com
+    Name: satellite
+    Private_ip: 192.168.50.222
+    Public_IP: 150.239.28.61
+    State: active

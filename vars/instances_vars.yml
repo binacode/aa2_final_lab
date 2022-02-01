@@ -1,0 +1,45 @@
+---
+instances:
+  - name: frontend1
+    keypair: 4c25-keypair
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group: 4c25-HostSG
+    internal_network: 4c25-dev-network
+    metadata:
+      AnsibleGroup: load_balancers
+      AnsibleGroup2: internal
+      deployment_name: dev
+
+  - name: app1
+    keypair: 4c25-keypair
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group: 4c25-HostSG
+    internal_network: 4c25-dev-network
+    metadata:
+      AnsibleGroup: app_servers
+      AnsibleGroup2: internal
+      deployment_name: dev
+
+  - name: app2
+    keypair: 4c25-keypair
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group: 4c25-HostSG
+    internal_network: 4c25-dev-network
+    metadata:
+      AnsibleGroup: app_servers
+      AnsibleGroup2: internal
+      deployment_name: dev
+
+  - name: appdb1
+    keypair: 4c25-keypair
+    image: rhel-8.3
+    flavor: GLOBAL-CPU_4_Memory_8192_Disk_30_flavor
+    security_group: 4c25-HostSG
+    internal_network: 4c25-dev-network
+    metadata:
+      AnsibleGroup: database_servers
+      AnsibleGroup2: internal
+      deployment_name: dev
