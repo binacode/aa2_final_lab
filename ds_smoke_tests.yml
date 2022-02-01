@@ -1,4 +1,19 @@
 ---
+- name: Deploy, configure, and populate flask repo and virtualenv
+  hosts: app_servers
+  become: true
+  gather_facts: false
+  tags:
+    - application_servers
+    - flask
+  roles:
+    - role: firewall
+      vars:
+        firewall_services:
+          - http
+        firewall_tcp_ports:
+          - 8080
+
 #- import_playbook: ds_in_memory_inventory.yml
 
 #- name: End to end smoke tests app&database

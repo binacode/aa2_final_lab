@@ -12,6 +12,6 @@
         firewall_services:
           - http
         firewall_tcp_ports:
-          - 443
+          - 8080
 
     - role: flask-app
