@@ -14,4 +14,4 @@
         firewall_tcp_ports:
           - 80
 
-    - role: haproxy
+#    - role: haproxy
